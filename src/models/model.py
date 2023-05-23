@@ -1,0 +1,3 @@
+from . import Identified
+class Model(Identified):
+    ...
