@@ -41,6 +41,5 @@ async def predict_image(model_id: str = 'resnet50', dataset_id: str = 'imagenet'
     
 
     return Response(
-        # headers={'Content-Type':'application/json'},
         media_type='application/json',
         content=dumps(_predict_image(image, application[0])))

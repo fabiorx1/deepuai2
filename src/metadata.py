@@ -38,10 +38,10 @@ class MetaData(BaseModel):
             models_utils[path] = preprocess, decoder
 
     def _download_apps(self, apps: list, dataset_id: str='imagenet'):
-        print('Carregando VGG16...')
-        apps.append((keras_apps.VGG16(weights=dataset_id), preprocess_input, decode_predictions))
-        print('Carregando VGG19...')
-        apps.append((keras_apps.VGG19(weights=dataset_id), preprocess_input, decode_predictions))
+        # print('Carregando VGG16...')
+        # apps.append((keras_apps.VGG16(weights=dataset_id), preprocess_input, decode_predictions))
+        # print('Carregando VGG19...')
+        # apps.append((keras_apps.VGG19(weights=dataset_id), preprocess_input, decode_predictions))
         print('Carregando Xception...')
         apps.append((keras_apps.Xception(weights=dataset_id), lambda x: preprocess_input(x, mode='tf'), decode_predictions))
         print('Carregando ResNet50...')
