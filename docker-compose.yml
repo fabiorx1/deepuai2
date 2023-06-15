@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  api:
+    container_name: deepuai
+    build:
+      context: .
+      dockerfile: fastapi.Dockerfile
+    ports:
+      - "8023:80"
+    expose:
+      - "8023"
+
+volumes:
+  database:
